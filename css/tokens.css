@@ -1,0 +1,68 @@
+/* === 1) TUS TOKENS (tal cual) === */
+:root {
+  --red-10: 255 229 229;   /* #FFE5E5 */
+  --red-20: 255 204 204;   /* #FFCCCC */
+  --red-30: 255 179 179;   /* #FFB3B3 */
+  --red-40: 255 153 153;   /* #FF9999 */
+  --red-50: 255 128 128;   /* #FF8080 */
+  --red-60: 255 77 77;     /* #FF4D4D */
+  --red-70: 255 26 26;     /* #FF1A1A */
+  --red-80: 230 0 0;       /* #E60000 */
+  --red-90: 179 0 0;       /* #B30000 */
+  --red-100: 152 0 0;      /* #980000 */
+  --red-110: 98 0 0;       /* #620000 */
+  --red-120: 55 0 0;       /* #370000 */
+
+  --blue-10: 227 246 254;  /* #E3F6FE */
+  --blue-20: 200 237 253;  /* #C8EDFD */
+  --blue-30: 172 228 252;  /* #ACE4FC */
+  --blue-40: 144 219 250;  /* #90DBFA */
+  --blue-50: 117 210 249;  /* #75D2F9 */
+  --blue-60: 62 191 247;   /* #3EBFF7 */
+  --blue-70: 34 182 246;   /* #22B6F6 */
+  --blue-80: 9 152 213;    /* #0998D5 */
+  --blue-90: 7 113 158;    /* #07719E */
+  --blue-100: 4 72 102;    /* #044866 */
+  --blue-110: 2 42 59;     /* #022A3B */
+  --blue-120: 2 26 37;     /* #021A25 */
+
+  --warm-00: 255 253 253;  /* #FFFDFD */
+  --warm-10: 255 248 248;  /* #FFF8F8 */
+  --warm-20: 252 238 238;  /* #FCEEEE */
+  --warm-30: 246 222 222;  /* #F6DEDE */
+
+  --cool-00: 254 254 254;  /* #FEFEFE */
+  --cool-10: 249 252 253;  /* #F9FCFD */
+  --cool-20: 237 245 248;  /* #EDF5F8 */
+  --cool-30: 221 233 240;  /* #DDE9F0 */
+
+  --font-brand: "Source Sans Pro", system-ui, sans-serif;
+}
+
+/* === 2) MAPEO A BOOTSTRAP (debe ir DESPUÉS de cargar Bootstrap en HTML) ===
+   NOTA: Como app.css se enlaza después del CSS de Bootstrap,
+   estas variables sobreescriben las de Bootstrap. */
+:root {
+  --bs-body-font-family: var(--font-brand);
+
+  --bs-primary: rgb(var(--blue-80));
+  --bs-primary-rgb: var(--blue-80);
+
+  --bs-secondary: rgb(var(--red-80));
+  --bs-secondary-rgb: var(--red-80);
+
+  --bs-info: rgb(var(--blue-60));
+  --bs-info-rgb: var(--blue-60);
+
+  --bs-light: rgb(var(--cool-00));
+  --bs-dark: rgb(var(--blue-110));
+
+  --bs-link-color: rgb(var(--blue-80));
+  --bs-link-hover-color: rgb(var(--blue-90));
+}
+
+/* === 3) UTILIDADES RÁPIDAS PARA USAR TUS TOKENS === */
+.text-brand-dark { color: rgb(var(--blue-110)) !important; }
+.bg-soft-primary { background: rgb(var(--blue-80) / .08) !important; }
+.bg-soft-danger  { background: rgb(var(--red-60) / .10) !important; }
+
