@@ -1,4 +1,30 @@
-/* === 1) TUS TOKENS (tal cual) === */
+
+:root{
+  
+  --selection-bg: rgb(var(--blue-100)); 
+  --selection-fg: #fff;                
+  --caret-color: rgb(var(--blue-80));  
+}
+
+
+*::selection{
+  background: var(--selection-bg);
+  color: var(--selection-fg);
+  text-shadow: none;
+}
+
+
+*::-moz-selection{
+  background: var(--selection-bg);
+  color: var(--selection-fg);
+  text-shadow: none;
+}
+
+
+:focus{
+  caret-color: var(--caret-color);
+}
+
 :root {
   --red-10: 255 229 229;   /* #FFE5E5 */
   --red-20: 255 204 204;   /* #FFCCCC */
@@ -39,9 +65,7 @@
   --font-brand: "Source Sans Pro", system-ui, sans-serif;
 }
 
-/* === 2) MAPEO A BOOTSTRAP (debe ir DESPUÉS de cargar Bootstrap en HTML) ===
-   NOTA: Como app.css se enlaza después del CSS de Bootstrap,
-   estas variables sobreescriben las de Bootstrap. */
+
 :root {
   --bs-body-font-family: var(--font-brand);
 
@@ -61,7 +85,7 @@
   --bs-link-hover-color: rgb(var(--blue-90));
 }
 
-/* === 3) UTILIDADES RÁPIDAS PARA USAR TUS TOKENS === */
+
 .text-brand-dark { color: rgb(var(--blue-110)) !important; }
 .bg-soft-primary { background: rgb(var(--blue-80) / .08) !important; }
 .bg-soft-danger  { background: rgb(var(--red-60) / .10) !important; }

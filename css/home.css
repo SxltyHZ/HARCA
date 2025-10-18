@@ -1,0 +1,62 @@
+@import url('./tokens.css');
+
+.harca-intro{
+  /* altura “auto”; margen y relleno ya se controlan con utilidades Bootstrap */
+  background: transparent;
+}
+
+/* Capa del pattern (imagen) con opacidad sutil, detrás del contenido */
+.harca-pattern{
+  position:absolute; inset:0;
+  background-image: url("/assets/svg/harca-pattern.svg"); /* ← tu pattern */
+  background-repeat: no-repeat;       /* o 'no-repeat' + 'center/cover' si es 1 grande */
+  background-position: center;
+  background-size: 90% auto;     /* ajusta al tamaño de tu zigzag */
+  opacity: 1;                    /* igual a tu mock; ajusta si lo ves fuerte */
+  pointer-events:none;             /* que no interfiera con el mouse */
+  z-index:0;
+}
+
+
+.harca-panel{
+  position:relative;
+  z-index:1;
+  max-width: 980px;                
+  border-radius: 1.5rem;
+  background: linear-gradient(95deg, var(--Neutral-Cool-20, #EDF5F8) 0%, var(--Red-10, #FFE5E5) 49.04%, var(--Neutral-Warm-00, #FFFDFD) 78.37%, var(--Blue-20, #C8EDFD) 100%);
+}
+
+
+.harca-logo-badge{
+  width: 180px; height: 180px;     
+  border-radius: 16px;
+  background: rgb(var(--cool-20));
+  display:flex; align-items:center; justify-content:center;
+  transform: translateY(40%);      
+  margin-bottom: 4rem;             
+
+  box-shadow: 0 4px 20px 0 rgba(116, 167, 189, 0.10);
+  position: relative;
+  z-index: 2;
+}
+.harca-logo-badge img{ max-width: 68%; height:auto; }
+
+
+.harca-textbox{
+  background: #fff;
+  border: 1px solid rgb(0 0 0 / 0.08);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  color: #1d2939;                  /* texto oscuro legible */
+  box-shadow: 0 2px 6px rgb(0 0 0 / .04);
+}
+
+/* ===== Responsivo ===== */
+@media (min-width: 992px){
+  .harca-logo-badge{
+    width: 200px; height: 200px;
+    transform: translateY(50%);
+    margin-bottom: 5rem;
+  }
+  .harca-panel{ padding: 3.5rem 4rem; }
+}
