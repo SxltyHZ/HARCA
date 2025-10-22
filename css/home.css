@@ -51,12 +51,68 @@
   box-shadow: 0 2px 6px rgb(0 0 0 / .04);
 }
 
-/* ===== Responsivo ===== */
-@media (min-width: 992px){
+.gth-item {
+display: flex;
+width: calc((100% - (2rem * 2)) / 3);
+height: 256px;
+align-items: flex-start;
+border-radius: 16px;
+background: var(--Red-100, #980000);
+color: rgb(var(--cool-00));
+position: relative;
+}
+
+.gth-item img {
+position: absolute;
+bottom: 0;
+right: 0;
+}
+
+.ght-bg {
+max-width: 370px;
+}
+
+#ght-bg-1 {
+position: absolute;
+left: 0;
+bottom: 10%;
+z-index: -1;  
+}
+
+#ght-bg-2 {
+position: absolute;
+right: 0;
+bottom: 10%;
+z-index: -1;  
+}
+
+
+@media (max-width: 1024px){
   .harca-logo-badge{
     width: 200px; height: 200px;
     transform: translateY(50%);
     margin-bottom: 5rem;
   }
   .harca-panel{ padding: 3.5rem 4rem; }
+
+  .gth-item{
+    width: calc(50% - 1rem);
+  }
+  
+  #ght-bg-1, #ght-bg-2 {
+    display: none;
+  }
+
+}
+
+@media (max-width: 576px){
+  .gth-item {
+    width: 100%;
+    height: 180px;
+  }
+
+  .gth-item img {
+    max-width: 96px;
+    height: auto;
+  }
 }
