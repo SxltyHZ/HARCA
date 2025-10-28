@@ -1,0 +1,178 @@
+
+@bp-mobile:  480px;
+@bp-tablet:  768px;
+@bp-desktop: 1200px;
+
+@bp-tablet-1:  (@bp-tablet - 1);
+@bp-desktop-1: (@bp-desktop - 1);
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body, p, h1, h2, h3, h4, h5, h6,
+blockquote, figure, dl, dd { margin: 0; padding: 0; }
+
+body {
+  font-family: "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: @blue-100; 
+}
+
+p, span, a, li, small, strong, em, label, input, textarea, button {
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+
+.font-fluid(@min, @pref, @max) { font-size: clamp(@min, @pref, @max); }
+
+.text-display {
+  // Mobile base
+  font-size: 44px; line-height: 118.18%; // ~52px
+  // Tablet
+  @media (min-width: @bp-tablet) and (max-width: @bp-desktop-1) {
+    font-size: 56px; line-height: 114.29%; // ~64px
+  }
+  // Desktop
+  @media (min-width: @bp-desktop) {
+    font-size: 64px; line-height: 112.5%; // 72px
+  }
+  font-weight: 700;
+}
+
+.heading-l {
+  font-size: 28px; line-height: 128.57%; // ~36px
+  @media (min-width: @bp-tablet) and (max-width: @bp-desktop-1) {
+    font-size: 32px; line-height: 125%; // 40px
+  }
+  @media (min-width: @bp-desktop) {
+    font-size: 40px; line-height: 120%; // 48px
+  }
+  font-weight: 700;
+}
+
+.heading-m {
+  font-size: 24px; line-height: 133.33%; // ~32px
+  @media (min-width: @bp-tablet) {
+    font-size: 24px; line-height: 133.33%; // ~32px
+  }
+  @media (min-width: @bp-desktop) {
+    font-size: 28px; line-height: 128.57%; // 36px
+  }
+  font-weight: 700;
+}
+
+.heading-s {
+  font-size: 20px; line-height: 140%; // 28px
+  font-weight: 700;
+}
+
+.body-l {
+  font-size: 18px; line-height: 155.56%; // ~28px
+  font-weight: 700; // según PDF, si no lo quieres bold: cámbialo a 400/normal
+}
+
+.body-m {
+  font-size: 16px; line-height: 150%; // 24px
+  font-weight: 700; // idem comentario de bold
+}
+
+
+.label {
+  font-size: 12px; line-height: 133.33%; // 16px
+  font-weight: 700;
+}
+
+.caption {
+  font-size: 10px; line-height: 140%; // 14px
+  font-weight: 700;
+}
+
+
+.desktop-text-left   { @media (min-width: @bp-desktop) { text-align: left; } }
+.desktop-text-center { @media (min-width: @bp-desktop) { text-align: center; } }
+.desktop-text-right  { @media (min-width: @bp-desktop) { text-align: right; } }
+
+.tablet-text-left {
+  @media (min-width: @bp-tablet) and (max-width: @bp-desktop-1) { text-align: left; }
+}
+.tablet-text-center {
+  @media (min-width: @bp-tablet) and (max-width: @bp-desktop-1) { text-align: center; }
+}
+.tablet-text-right {
+  @media (min-width: @bp-tablet) and (max-width: @bp-desktop-1) { text-align: right; }
+}
+
+.mobile-text-left  { @media (max-width: @bp-tablet-1) { text-align: left; } }
+.mobile-text-center{ @media (max-width: @bp-tablet-1) { text-align: center; } }
+.mobile-text-right { @media (max-width: @bp-tablet-1) { text-align: right; } }
+
+.text-max-50 {
+  @media (min-width: @bp-desktop) { max-width: 50%; }
+  @media (min-width: @bp-tablet) and (max-width: @bp-desktop-1) { max-width: 65%; }
+  @media (max-width: @bp-tablet-1) { max-width: 100%; }
+}
+.text-max-60 {
+  @media (min-width: @bp-desktop) { max-width: 60%; }
+  @media (min-width: @bp-tablet) and (max-width: @bp-desktop-1) { max-width: 75%; }
+  @media (max-width: @bp-tablet-1) { max-width: 100%; }
+}
+.text-max-70 {
+  @media (min-width: @bp-desktop) { max-width: 70%; }
+  @media (min-width: @bp-tablet) and (max-width: @bp-desktop-1) { max-width: 85%; }
+  @media (max-width: @bp-tablet-1) { max-width: 100%; }
+}
+.text-max-80 {
+  @media (min-width: @bp-desktop) { max-width: 80%; }
+  @media (min-width: @bp-tablet) and (max-width: @bp-desktop-1) { max-width: 95%; }
+  @media (max-width: @bp-tablet-1) { max-width: 100%; }
+}
+.text-max-90 {
+  @media (min-width: @bp-desktop) { max-width: 90%; }
+  @media (min-width: @bp-tablet) and (max-width: @bp-desktop-1) { max-width: 100%; }
+  @media (max-width: @bp-tablet-1) { max-width: 100%; }
+}
+.text-max-100 {
+  max-width: 100%;
+}
+
+// Reds
+.text-red-10  { color: @red-10; }
+.text-red-20  { color: @red-20; }
+.text-red-30  { color: @red-30; }
+.text-red-40  { color: @red-40; }
+.text-red-50  { color: @red-50; }
+.text-red-60  { color: @red-60; }
+.text-red-70  { color: @red-70; }
+.text-red-80  { color: @red-80; }
+.text-red-90  { color: @red-90; }
+.text-red-100 { color: @red-100; }
+.text-red-110 { color: @red-110; }
+.text-red-120 { color: @red-120; }
+
+// Blues
+.text-blue-10  { color: @blue-10; }
+.text-blue-20  { color: @blue-20; }
+.text-blue-30  { color: @blue-30; }
+.text-blue-40  { color: @blue-40; }
+.text-blue-50  { color: @blue-50; }
+.text-blue-60  { color: @blue-60; }
+.text-blue-70  { color: @blue-70; }
+.text-blue-80  { color: @blue-80; }
+.text-blue-90  { color: @blue-90; }
+.text-blue-100 { color: @blue-100; }
+.text-blue-110 { color: @blue-110; }
+.text-blue-120 { color: @blue-120; }
+
+// Warm (Neutral-Warm)
+.text-warm-00 { color: @warm-00; }
+.text-warm-10 { color: @warm-10; }
+.text-warm-20 { color: @warm-20; }
+.text-warm-30 { color: @warm-30; }
+
+// Cool (Neutral-Cool)
+.text-cool-00 { color: @cool-00; }
+.text-cool-10 { color: @cool-10; }
+.text-cool-20 { color: @cool-20; }
+.text-cool-30 { color: @cool-30; }
+

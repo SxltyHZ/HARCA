@@ -1,0 +1,208 @@
+/* =========================================================
+   BUTTONS — base, variants, states, icons, alignment 
+
+   ========================================================= */
+
+
+@btn-radius: .75rem;
+@btn-pad-y: 1rem;
+@btn-pad-x: 2rem;
+@btn-gap: .5rem;           
+@btn-font: "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+@btn-size: 1.125rem;       
+@btn-lh: 1.5;              
+
+
+@focus-ring-base:      0 0 0 3px fade(#000,25%), 0 0 0 5px fade(@blue-50,75%);
+@focus-ring-primary:   0 0 0 3px fade(#000,25%), 0 0 0 5px fade(@red-50,75%);
+@focus-ring-secondary: @focus-ring-primary;
+@focus-ring-tertiary:  0 0 0 3px fade(#000,25%), 0 0 0 5px fade(@blue-50,75%);
+
+
+a.btn, .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: @btn-gap;
+  padding: @btn-pad-y @btn-pad-x;
+  border-radius: @btn-radius;
+  text-decoration: none;
+  font-family: @btn-font;
+  font-size: @btn-size;
+  line-height: @btn-lh;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  border: 1px solid transparent; 
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .06s ease;
+
+  &:focus-visible { outline: none; box-shadow: @focus-ring-base; }
+
+  &[aria-disabled="true"],
+  &.btn-off,
+  &:disabled {
+    pointer-events: none;
+    opacity: .85;
+    filter: saturate(.85);
+    cursor: not-allowed;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  a.btn, .btn { transition: none; }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn:active { transform: translateY(1px); }
+}
+
+
+.btn-primary {
+  background: @red-100;
+  color: @cool-00;
+
+  &:hover { background: @red-80; }
+  &:focus-visible { box-shadow: @focus-ring-primary; }
+
+  &.btn-off,
+  &[aria-disabled="true"],
+  &:disabled {
+    background: @cool-30;
+    color: @cool-00;
+    border-color: transparent;
+  }
+}
+
+
+.btn-secondary {
+  background: @cool-00;
+  color: @red-100;
+  border-color: @red-100;
+
+  &:hover { background: @red-10; border-color: @red-100; }
+  &:focus-visible { box-shadow: @focus-ring-secondary; }
+
+  &.btn-off,
+  &[aria-disabled="true"],
+  &:disabled {
+    background: @cool-00;
+    border-color: @cool-30;
+    color: @cool-30;
+  }
+}
+
+
+.btn-tertiary {
+  background: @blue-80;
+  color: @cool-00;
+
+  &:hover { background: @blue-50; color: @cool-00; }
+  &:focus-visible { box-shadow: @focus-ring-tertiary; }
+
+  &.btn-off,
+  &[aria-disabled="true"],
+  &:disabled {
+    background: @cool-30;
+    color: @cool-00;
+  }
+}
+
+
+.btn > svg,
+.btn > i {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: 0 0 auto;
+  display: inline-block;
+}
+
+
+.btn--icon {
+  padding: .75rem;
+  aspect-ratio: 1/1;
+}
+
+
+.btn--sm { font-size: 1rem;    padding: .75rem 1rem; }
+.btn--lg { font-size: 1.25rem; padding: 1.125rem 2.25rem; }
+
+
+.btn-block { display: block; width: max-content; }
+
+.btn-align-left   { display: block; margin-left: 0;    margin-right: auto; }
+.btn-align-center { display: block; margin-left: auto; margin-right: auto; }
+.btn-align-right  { display: block; margin-left: auto; margin-right: 0; }
+
+.self-start   { align-self: flex-start; }
+.self-center  { align-self: center; }
+.self-end     { align-self: flex-end; }
+.self-stretch { align-self: stretch; }
+
+.btn-fluid { display: block; width: 100%; }
+
+
+@media (max-width: 1023.98px) {
+  .tb-btn-align-left   { display: block; margin-left: 0;    margin-right: auto; }
+  .tb-btn-align-center { display: block; margin-left: auto; margin-right: auto; }
+  .tb-btn-align-right  { display: block; margin-left: auto; margin-right: 0; }
+
+  .tb-self-start   { align-self: flex-start; }
+  .tb-self-center  { align-self: center; }
+  .tb-self-end     { align-self: flex-end; }
+  .tb-self-stretch { align-self: stretch; }
+
+  .tb-btn-fluid { display: block; width: 100%; }
+}
+@media (max-width: 767.98px) {
+  .mb-btn-align-left   { display: block; margin-left: 0;    margin-right: auto; }
+  .mb-btn-align-center { display: block; margin-left: auto; margin-right: auto; }
+  .mb-btn-align-right  { display: block; margin-left: auto; margin-right: 0; }
+
+  .mb-self-start   { align-self: flex-start; }
+  .mb-self-center  { align-self: center; }
+  .mb-self-end     { align-self: flex-end; }
+  .mb-self-stretch { align-self: stretch; }
+
+  .mb-btn-fluid { display: block; width: 100%; }
+}
+
+
+.btn-primary-off {
+  background: @cool-30;
+  color: @cool-00;
+  border-color: transparent;
+  pointer-events: none;
+  opacity: .85;
+  filter: saturate(.85);
+  cursor: not-allowed;
+}
+.btn-secondary-off {
+  background: @cool-00;
+  border-color: @cool-30;
+  color: @cool-30;
+  pointer-events: none;
+  opacity: .85;
+  filter: saturate(.85);
+  cursor: not-allowed;
+}
+.btn-tertiary-off {
+  background: @cool-30;
+  color: @cool-00;
+  pointer-events: none;
+  opacity: .85;
+  filter: saturate(.85);
+  cursor: not-allowed;
+}
+
+
+.is-hover {
+  .btn-primary   { background: @red-80; }
+  .btn-secondary { background: @red-10; }
+  .btn-tertiary  { background: @blue-50; color: @cool-00; }
+}
+.is-disabled {
+  .btn { pointer-events: none; cursor: not-allowed; opacity: .85; filter: saturate(.85); }
+}

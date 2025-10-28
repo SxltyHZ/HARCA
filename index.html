@@ -4,49 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HARCA - Home </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/tokens.css">
-    <link rel="stylesheet" href="css/buttons.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/font.css">
+        <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet/less" type="text/css" href="./css/tokens.less"/>
+    <link rel="stylesheet/less" type="text/less" href="./css/home.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+
+    
+
 </head>
 <body>
 
-<header class="py-5">
-  <div class="container">
-    <h1 class="display-6 fw-bold text-brand-dark mb-2">
-      Hola, este es mi hero
-    </h1>
-    <p class="lead mb-4">
-      Bootstrap + mis tokens, sin enredos.
-    </p>
-    <a class="btn btn-primary btn-lg">Guardar</a>
-  </div>
-</header>
-
-<!-- SECTION: HARCA Intro -->
-<section class="harca-intro position-relative overflow-hidden py-10">
+<!-- HARCA Intro Section-->
+<section class="harca-intro">
 
   <div class="harca-pattern"></div>
 
-  <div class="container position-relative">
+  <div class="harca-logo-badge__wrapper">
     
-    <div class="harca-logo-badge mx-auto">
-      <img src="./assets/svg/harca-logo.svg" alt="HARCA" class="img-fluid">
+    <div class="harca-logo-badge">
+      <img src="./assets/svg/harca-logo.svg" alt="HARCA">
     </div>
 
-    <div class="harca-panel mx-auto p-4 p-sm-4 p-md-5 gap-4 d-flex flex-column">
+    <div class="harca-panel container flex flex-col gap-1">
+
+        <h2 class="heading-m desktop-text-center tablet-text-center mobile-text-center">
+          About HARCA
+        </h2>
       <div>
-        <p class="mb-0 text-center text-brand-dark">
+        <p class="body-m desktop-text-center tablet-text-center mobile-text-center">
           The <strong>Area Roofing Contractors Association (HARCA)</strong>  is a regional chapter of the
           Roofing Contractors Association of Texas (RCAT), representing the voice of the roofing
           and waterproofing industry in Houston and nearby areas.
         </p>
       </div>
       <div>
-        <p class="mb-0 text-center text-brand-dark">
+        <p class="body-m desktop-text-center tablet-text-center mobile-text-center">
           We support contractors with continuing education, networking, and industry advocacy,
           while also promoting consumer awareness and high standards across the field.
         </p>
@@ -56,41 +52,236 @@
   
 </section>
 
-<!-- SECTION: We Serve Greater Houston Area -->
+<!-- We Serve Greater Houston Area Section -->
 
-<section class="greater-houston-area col d-flex flex-column gap-4 pb-4 mt-5 mb-4 position-relative">
+<section class="greater-houston-area container--fluid flex flex-col items-center justify-center s-py-3 md-py-4 d-py-8 relative gap-2">
 
   <img src="./assets/svg/greater-houston-repeater/gth-pattern.svg" alt="" id="ght-bg-1" class="ght-bg">
 
   <div>
-    <h2 class="ty-heading-l text-center text-brand-dark">We Serve the Greater Houston Area Via:</h2>
+    <h2 class="heading-l desktop-text-center tablet-text-center mobile-text-center">We Serve the Greater Houston Area Via:</h2>
   </div>
 
-  <div class="gth-wrapper container-xl d-flex justify-content-center align-items-center align-content-center flex-wrap gap-4 mx-auto">
-<div class="gth-item overflow-hidden">
-  <h3 class="ty-heading-m p-4"> Advocacy and Local Industry Representation </h3>
-  <img src="./assets/svg/greater-houston-repeater/piramid.svg" alt="" class="gth-item__img" loading="lazy">
-</div>
-<div class="gth-item overflow-hidden">
-  <h3 class="ty-heading-m p-4"> Government Relations </h3>
-  <img src="./assets/svg/greater-houston-repeater/goverment.svg" alt="" class="gth-item__img" loading="lazy">
-</div>
-<div class="gth-item overflow-hidden">
-  <h3 class="ty-heading-m p-4"> Education and Professional Development </h3>
-  <img src="./assets/svg/greater-houston-repeater/book.svg" alt="" class="gth-item__img" loading="lazy">
-</div>
-<div class="gth-item overflow-hidden">
-  <h3 class="ty-heading-m p-4"> Networking and Events </h3>
-  <img src="./assets/svg/greater-houston-repeater/networking.svg" alt="" class="gth-item__img" loading="lazy">
-</div>
-<div class="gth-item overflow-hidden">
-  <h3 class="ty-heading-m p-4"> Consumer Awareness Resources </h3>
-  <img src="./assets/svg/greater-houston-repeater/resources.svg" alt="" class="gth-item__img" loading="lazy">
-</div>
-</div>
+  <div class="gth-wrapper">
+    <div class="gth-item">
+      <h3 class="ty-heading-m"> Advocacy and Local Industry Representation </h3>
+      <img src="./assets/svg/greater-houston-repeater/piramid.svg" alt="" class="gth-item__img" loading="lazy">
+    </div>
+    <div class="gth-item">
+      <h3 class="ty-heading-m"> Government Relations </h3>
+      <img src="./assets/svg/greater-houston-repeater/goverment.svg" alt="" class="gth-item__img" loading="lazy">
+    </div>
+    <div class="gth-item">
+      <h3 class="ty-heading-m"> Education and Professional Development </h3>
+      <img src="./assets/svg/greater-houston-repeater/book.svg" alt="" class="gth-item__img" loading="lazy">
+    </div>
+    <div class="gth-item">
+      <h3 class="ty-heading-m"> Networking and Events </h3>
+      <img src="./assets/svg/greater-houston-repeater/networking.svg" alt="" class="gth-item__img" loading="lazy">
+    </div>
+    <div class="gth-item">
+      <h3 class="ty-heading-m"> Consumer Awareness Resources </h3>
+      <img src="./assets/svg/greater-houston-repeater/resources.svg" alt="" class="gth-item__img" loading="lazy">
+    </div>
+  </div>
 
-<img src="./assets/svg/greater-houston-repeater/gth-pattern.svg" alt="" id="ght-bg-2" class="ght-bg">
+  <img src="./assets/svg/greater-houston-repeater/gth-pattern.svg" alt="" id="ght-bg-2" class="ght-bg">
 </section>
 
+<!-- Cards Section-->
+
+<section class="every-role-houston flex flex-col lg-flex-col d-gap-2-5 container--fluid items-center justify-center d-pb-5">
+  <h2 class="heading-l desktop-text-center tablet-text-center mobile-text-center">
+    For Every Role in Houston Roofing
+  </h2>
+  <span class="body-m desktop-text-center tablet-text-center mobile-text-center text-max-50">
+    HARCA brings together two essential member types: roofing contractors who power the work on the ground, and associate members who fuel the industry with materials, services, and support.
+    Together, we elevate Houston’s roofing standards.
+  </span>
+  <!-- Card 1-->
+<div class="role-houston-card container flex flex-col lg-flex-row items-stretch lg-rounded-16 overflow-hidden bg-cool-20 relative">
+  <img src="./assets/svg/rhc-text-asset.svg" alt="" class="rhc-text-asset">
+  <div class="rhc-img w-full lg-w-1-2">
+    <img src="./assets/pictures/home-roofing-contractor.webp" alt="" class="rhc-media__img">
+  </div>
+  <div class="rhc-text w-full lg-w-1-2 flex lg-flex-col justify-center p-2 d-gap-1 lg-px-2 d-px-2 ">
+    <h2 class="heading-m">Roofing Contractors</h2>
+    <span class="body-m">Join a trusted network of Houston roofers dedicated to growing their businesses, connecting locally, and raising the bar for quality.</span>
+    <a href="" class="btn btn-primary self-start"> Explore Contractor Membership</a>
+  </div>
+  
+</div>
+<!-- Card 2-->
+<div class="role-houston-card container flex flex-col lg-flex-row items-stretch lg-rounded-16 overflow-hidden bg-cool-20 relative">
+  <img src="./assets/svg/rhc-text-asset.svg" alt="" class="rhc-text-asset">
+  <div class="rhc-img w-full lg-w-1-2">
+    <img src="./assets/pictures/home-associate-members.webp" alt="" class="rhc-media__img">
+  </div>
+  <div class="rhc-text w-full lg-w-1-2 flex lg-flex-col justify-center p-2 gap-1 lg-px-2 d-px-2 ">
+    <h2 class="heading-m">Associate Members</h2>
+    <span class="body-m">From suppliers and manufacturers to lawyers and inventors, our associate members help shape the future of roofing in Greater Houston.</span>
+    <a href="" class="btn btn-primary self-start"> Explore Associate Membership</a>
+  </div>
+</div>
+</section>
+
+<!-- Testimonial Section -->
+ <section class="testimonials-section container--fluid d-pb-5">
+  <div class="testimonials-section__wrapper flex lg-flex-col d-gap-2">
+    <h2 class="text-display text-red-100 desktop-text-center">
+      Why Roofers Choose HARCA
+    </h2>
+    <div class="swiper testimonial-swiper container">
+      <div class="swiper-wrapper">
+        <!-- Sliders-->
+
+        <div class="swiper-slide">
+          <div class="testimonial-slide lg-rounded-16 overflow-hidden">
+            <div class="testimonial-top bg-blue-10 flex justify-center d-py-1">
+              <img src="./assets/pictures/Charles-Vincent-1.webp" alt="" class=" testimonial-avatar">
+            </div>
+            <div class="testimonial-content flex flex-col justify-between bg-blue-100 d-p-1-5">
+            <p class="body-m text-cool-00">
+              “Great organization, the licensed roofer program has brought us more business.”
+            </p>
+            <span class="heading-m text-cool-00">
+              Charles Vincent
+            </span>
+            </div>
+          </div>
+        </div>
+
+                <div class="swiper-slide">
+          <div class="testimonial-slide lg-rounded-16 overflow-hidden">
+            <div class="testimonial-top bg-blue-10 flex justify-center d-py-1">
+              <img src="./assets/pictures/Charles-Vincent-1.webp" alt="" class=" testimonial-avatar">
+            </div>
+            <div class="testimonial-content flex flex-col justify-between bg-blue-100 d-p-1-5">
+            <p class="body-m text-cool-00">
+              “Great organization, the licensed roofer program has brought us more business.”
+            </p>
+            <span class="heading-m text-cool-00">
+              Charles Vincent
+            </span>
+            </div>
+          </div>
+        </div>
+
+                <div class="swiper-slide">
+          <div class="testimonial-slide lg-rounded-16 overflow-hidden">
+            <div class="testimonial-top bg-blue-10 flex justify-center d-py-1">
+              <img src="./assets/pictures/Charles-Vincent-1.webp" alt="" class=" testimonial-avatar">
+            </div>
+            <div class="testimonial-content flex flex-col justify-between bg-blue-100 d-p-1-5">
+            <p class="body-m text-cool-00">
+              “Great organization, the licensed roofer program has brought us more business.”
+            </p>
+            <span class="heading-m text-cool-00">
+              Charles Vincent
+            </span>
+            </div>
+          </div>
+        </div>
+
+                <div class="swiper-slide">
+          <div class="testimonial-slide lg-rounded-16 overflow-hidden">
+            <div class="testimonial-top bg-blue-10 flex justify-center d-py-1">
+              <img src="./assets/pictures/Charles-Vincent-1.webp" alt="" class=" testimonial-avatar">
+            </div>
+            <div class="testimonial-content flex flex-col justify-between bg-blue-100 d-p-1-5">
+            <p class="body-m text-cool-00">
+              “Great organization, the licensed roofer program has brought us more business.”
+            </p>
+            <span class="heading-m text-cool-00">
+              Charles Vincent
+            </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sliders-->
+      </div>
+    </div>
+  </div>
+ </section>
+
+ <!-- We Stand For Section -->
+
+ <section class="we-stand-for container d-pb-5 flex lg-flex-col d-gap-2">
+  <h3 class="text-display desktop-text-center tablet-text-center mobile-text-center">
+    What We Stand For
+  </h3>
+  <div class="we-stand-for__wrapper container d-gap-2">
+    <!-- Items-->
+    <div class="we-stand-for__item d-p-2 lg-rounded-16 "  id="wsd-item1">
+      <h3 class="heading-m text-cool-00">
+        We earn trust through craftsmanship.
+      </h3>
+    </div>
+
+        <div class="we-stand-for__item d-p-2 lg-rounded-16 "  id="wsd-item2">
+      <h3 class="heading-m text-cool-00">
+        We earn trust through craftsmanship.
+      </h3>
+    </div>
+
+        <div class="we-stand-for__item d-p-2 lg-rounded-16 "  id="wsd-item3">
+      <h3 class="heading-m text-cool-00">
+        We earn trust through craftsmanship.
+      </h3>
+    </div>
+
+        <div class="we-stand-for__item d-p-2 lg-rounded-16 "  id="wsd-item4">
+      <h3 class="heading-m text-cool-00">
+        We earn trust through craftsmanship.
+      </h3>
+    </div>
+    
+  </div>
+ </section>
+
+<!-- HARCA Awards Section-->
+
+<section class="harca-awards container--fluid flex justify-center items-center bg-blue-120 relative">
+  <img src="/assets/svg/signature-bg.svg" alt="" class="award-signature">
+<div class="award-left">
+<img src="/assets/svg/award-left.svg" alt="">
+</div>
+<div class="award-content flex flex-col container justify-center items-center d-gap-2">
+<h2 class="heading-l text-cool-00 desktop-text-center">
+  HARCA “Best of Roofing” Awards Program
+</h2>
+<span class="body-m text-cool-00 desktop-text-center">
+Each year, HARCA honors standout contractor and associate member teams who exemplify excellence in roofing across Greater Houston. 
+<br><br>
+From craftsmanship to innovation, these awards celebrate the best projects in our industry. 
+<br><br>
+Explore past winners, award categories, and how to submit your entry on the full awards page.
+</span>
+<a href="" class="btn btn-tertiary">
+View Awards & Apply
+</a>
+</div>
+<div class="award-right">
+<img src="/assets/svg/award-right.svg" alt="">
+</div>
+<div class="award-signature">
+
+</div>
+</section>
+
+<section class="upcoming-events">
+<div class="events-text">
+
+</div>
+<div class="">
+
+</div>
+</section>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="js/testimonial-slider.js" defer></script>
 </body>
+
 </html>

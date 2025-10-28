@@ -1,0 +1,256 @@
+@import "./tokens.less";
+@import "./typo.less";
+@import "./spacing.less";
+@import "./layout.less";
+@import "./colors.less";
+@import "./buttons.less";
+@import "./rounded.less";
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.harca-intro{
+        display: flex;
+    max-width: 1440px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  background: transparent;
+  position: relative;
+}
+
+.harca-pattern{
+  position:absolute; inset:0;
+  background-image: url("/assets/svg/harca-pattern.svg"); 
+  background-repeat: no-repeat;       
+  background-position: center;
+  background-size: 90% auto;     
+  opacity: 1;                    
+  pointer-events:none;             
+  z-index:0;
+  top: 0;
+}
+
+.harca-logo-badge__wrapper {
+display: flex;
+max-width: 1064px;
+flex-direction: column;
+align-items: center;
+gap: -70px;
+}
+
+.harca-panel{
+  position:relative;
+  z-index:1;
+  max-width: 1064px;                
+  border-radius: 1.5rem;
+  gap: 1rem;
+  padding: 48px 212px;
+    background: linear-gradient(
+    95deg,
+    @cool-20 0%,
+    @red-10 49.04%,
+    @warm-00 78.37%,
+    @blue-20 100%
+  );
+}
+
+.harca-logo-badge {
+width: 180px; height: 180px;     
+  border-radius: 16px;
+  background: @cool-20;
+  display:flex; align-items:center; justify-content:center;
+  transform: translateY(40%);      
+  margin-bottom: 4rem;             
+  box-shadow: 0 4px 20px 0 rgba(116, 167, 189, 0.10);
+  position: relative;
+  z-index: 2;
+}
+
+.gth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 2rem;
+    max-width: 1064px;
+    flex-wrap: wrap;
+}
+
+.gth-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;     
+  align-items: flex-start;     
+  gap: 2rem;                      
+}
+
+
+.gth-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex: 0 0 calc((100% - 4rem) / 3);
+  max-width: calc((100% - 4rem) / 3);
+  height: 256px;
+  padding: 24px;
+  border-radius: 16px;
+  background: @red-100;  
+  color: @cool-00;       
+}
+
+
+.gth-item img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.ght-bg {
+max-width: 370px;
+}
+
+#ght-bg-1 {
+position: absolute;
+left: 0;
+bottom: 10%;
+z-index: -1;  
+}
+
+#ght-bg-2 {
+position: absolute;
+right: 0;
+bottom: 10%;
+z-index: -1;  
+}
+
+.role-houston-card {
+  height: 480px;
+}
+
+.rhc-text-asset {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+
+
+.rhc-media__img {
+    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.testimonial-avatar {
+  display: block;
+  height: 80px;
+  width: 80px;
+}
+
+.testimonial-content {
+  height: 268px;
+}
+
+
+.swiper.testimonial-swiper {
+  width: 100%;
+  overflow: hidden;           
+  position: relative;        
+}
+
+
+.swiper.testimonial-swiper .swiper-wrapper {
+  display: flex !important;   
+  width: auto !important;     
+  transform: translate3d(0,0,0); 
+}
+
+.swiper.testimonial-swiper .swiper-slide {
+  flex-shrink: 0 !important;  
+  width: auto;                
+  box-sizing: border-box;
+}
+
+.we-stand-for__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  grid-auto-rows: auto; 
+  width: 100%;
+}
+
+.we-stand-for__item {
+  height: 240px;
+  width: 100%;
+}
+
+#wsd-item1 {
+background: url('/assets/pictures/wsd-item1.webp') 50% / cover no-repeat, #22B6F6;
+}
+
+#wsd-item2 {
+background: url('/assets/pictures/wsd-item2.webp') 50% / cover no-repeat, #22B6F6;
+}
+
+#wsd-item3 {
+background: url('/assets/pictures/wsd-item3.webp') 50% / cover no-repeat, #22B6F6;
+}
+
+#wsd-item4 {
+background: url('/assets/pictures/wsd-item4.webp') 50% / cover no-repeat, #22B6F6;
+}
+
+.harca-awards {
+  height: 585px;
+}
+
+.award-signature {
+  position: absolute;
+  width: 80%;
+  z-index: 0;
+}
+
+.award-content, .award-right, .award-left {
+  z-index: 1;
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .gth-item {
+
+    flex: 0 0 calc((100% - 2rem) / 2);
+    max-width: calc((100% - 2rem) / 2);
+
+    height: 240px;
+    padding: 20px;
+  }
+
+  .role-houston-card {
+  height: auto;
+}
+}
+
+
+@media (max-width: 767.98px) {
+  .gth-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: auto;      
+    min-height: 200px; 
+    padding: 16px;
+  }
+
+  .rhc-img { aspect-ratio: 16/9; }
+}
+
